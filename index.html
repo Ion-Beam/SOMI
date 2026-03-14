@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOMI</title>
+    <meta
+      name="description"
+      content="A single-page reading room for the five SOMI outlines."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="reading-room">
+      <header class="masthead">
+        <p class="eyebrow">SOMI Reading Room</p>
+        <h1>SOMI</h1>
+        <p class="intro">
+          Five outlines are rendered below as paper-like folio pages in one
+          continuous reading view.
+        </p>
+        <nav id="book-nav" class="book-nav" aria-label="Document navigation"></nav>
+      </header>
+
+      <main id="folio" class="folio" aria-live="polite">
+        <section class="sheet loading-sheet" aria-busy="true">
+          <div class="sheet-inner">
+            <header class="running-head">SOMI</header>
+            <div class="sheet-body">
+              <p>Loading documents...</p>
+            </div>
+            <footer class="page-number">1</footer>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
