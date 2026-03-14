@@ -59,15 +59,6 @@ function enableProtections() {
       event.preventDefault();
     }
   });
-
-  const syncVisibilityProtection = () => {
-    document.body.classList.toggle("blurred", document.hidden);
-  };
-
-  syncVisibilityProtection();
-  document.addEventListener("visibilitychange", syncVisibilityProtection);
-  window.addEventListener("blur", () => document.body.classList.add("blurred"));
-  window.addEventListener("focus", () => document.body.classList.remove("blurred"));
 }
 
 function renderNav() {
@@ -183,7 +174,6 @@ function markdownToHtml(markdown) {
 
     if (!line) {
       closeParagraph();
-      closeLists();
       return;
     }
 
@@ -254,6 +244,7 @@ function markdownToHtml(markdown) {
       return;
     }
 
+    closeLists();
     paragraphLines.push(line);
   });
 
